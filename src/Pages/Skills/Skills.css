@@ -1,0 +1,111 @@
+/* Skills.css */
+.skills {
+  padding: 100px 20px; /* Padding for overall section */
+  background-color: #212121; /* Black background for a sleek look */
+  color: #ffffff; /* White text for readability */
+  text-align: center; /* Centering text for visual balance */
+  height: 100vh;
+}
+
+.section-title {
+  font-size: 3rem; /* Large title for emphasis */
+  margin-bottom: 10px; /* Space below title */
+  color: #ffffff; /* White for contrast and professionalism */
+  letter-spacing: 1px; /* Subtle spacing for enhanced legibility */
+}
+
+.section-description {
+  font-size: 1.3rem; /* Clear description size */
+  margin-bottom: 50px; /* Space below description */
+  color: #dcdcdc; /* Light grey for a modern feel */
+}
+
+/* Skills Container */
+.skills-container {
+  display: flex; /* Flexbox layout for responsive design */
+  justify-content: center; /* Center items horizontally */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 40px; /* Space between cards */
+}
+
+/* Skill Card */
+.skill-card {
+  background-color: #323232; /* Dark grey card background */
+  color: #ffffff; /* White text for readability */
+  padding: 30px; /* Inner spacing */
+  width: 300px; /* Fixed width for cards */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Soft shadow for depth */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease; /* Smooth transitions */
+  opacity: 0; /* Initially invisible */
+  animation: fadeIn 1.2s forwards, bounce 1.5s ease-in-out; /* Fade in and bounce effect */
+}
+
+/* Skill Card Title */
+.skill-card h3 {
+  font-size: 2rem; /* Title size */
+  margin-bottom: 15px; /* Space below title */
+  color: #ffffff; /* White for title */
+}
+
+/* Skill List */
+.skill-card ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  font-size: 1.1rem; /* Font size for list items */
+  color: #dcdcdc; /* Light grey for skill items */
+}
+
+.skill-card ul li {
+  margin-bottom: 10px; /* Space below each item */
+  position: relative; /* Position for custom checkmark */
+  padding-left: 20px; /* Space for checkmark */
+}
+
+/* Skill Highlight */
+.skill-card ul li::before {
+  content: '✔'; /* Checkmark to highlight skill */
+  position: absolute; /* Absolute positioning */
+  left: 0; /* Align to left */
+  color: #ffffff; /* White for checkmark */
+  font-weight: bold; /* Bold checkmark */
+}
+
+/* Hover Effects */
+.skill-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7); /* Deeper shadow */
+  background-color: #2c2c2c; /* Slightly lighter color on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    opacity: 1; /* Fade in */
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Reset position */
+  }
+  50% {
+    transform: translateY(-10px); /* Bounce effect */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .skill-card {
+    width: 90%; /* Responsive card width */
+    max-width: 400px; /* Maximum width for larger screens */
+  }
+}

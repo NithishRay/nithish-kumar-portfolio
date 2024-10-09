@@ -1,0 +1,47 @@
+/* Hero.css */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  background: #212121; /* Hero background color */
+  color: white;
+}
+
+.hero-content {
+  max-width: 600px; /* Limit the width of the text content */
+  padding: 20px; /* Add some padding around the content */
+  text-align: center; /* Center text within this div */
+  z-index: 1; /* Ensure content is above the image */
+}
+
+.hero-image {
+  width: 250px; /* Fixed width for the image */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px; /* Space between image and text */
+  z-index: 0; /* Behind the content */
+}
+
+.hero-image img {
+  width: 100%; /* Make image responsive */
+  border-radius: 50%; /* Circular image */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect for depth */
+}
+
+.button {
+  position: absolute;
+  background-color: #1ED760; /* Button color */
+  color: #ffffff;
+  padding: 10px 20px;
+  margin-left: -70px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Button hover transition */
+}
+
+.button:hover {
+  background-color: #1a5276; /* Darker shade on hover */
+}
