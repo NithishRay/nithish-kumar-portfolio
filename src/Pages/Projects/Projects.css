@@ -1,0 +1,181 @@
+/* Dark Theme - Projects.css */
+.projects {
+  padding: 80px 20px; /* Padding for overall section */
+  background-color: #212121; /* Black background */
+  color: #f5f5f5; /* Light text for contrast */
+  text-align: center; /* Centering text */
+  animation: fadeIn 1.2s ease-in-out forwards; /* Fade-in animation */
+}
+
+.section-title {
+  font-size: 25px; /* Title size */
+  margin-bottom: 30px; /* Space below title */
+  font-weight: 700; /* Bold title */
+  color: #ffffff; /* White accent for title */
+  letter-spacing: 1px; /* Spacing between letters */
+  animation: slideIn 1.2s ease-in-out; /* Slide-in animation for the title */
+}
+
+.projects-container {
+  display: flex; /* Flexbox layout for responsive design */
+  flex-wrap: wrap; /* Wrap items */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Space between items */
+  opacity: 0; /* Initially invisible */
+  animation: fadeInUp 1.5s forwards 0.3s; /* Delayed fade-in and move-up */
+}
+
+.project-card {
+  background-color: #3d3c3c; /* Dark grey card background */
+  border-radius: 10px; /* Rounded corners */
+  width: 100%; /* Full width */
+  max-width: 350px; /* Max width for cards */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease; /* Smooth transitions */
+  position: relative; /* For hover effects */
+  overflow: hidden; /* Hide overflow */
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Upward movement on hover */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6); /* Stronger shadow on hover */
+  background-color: #2c2c2c; /* Slightly lighter on hover */
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0; /* Initial width for overlay */
+  height: 100%; /* Full height */
+  background: rgba(255, 255, 255, 0.2); /* Subtle white overlay */
+  transition: width 0.3s ease; /* Transition for overlay */
+}
+
+.project-card:hover::before {
+  width: 100%; /* Full width on hover */
+}
+
+.project-content {
+  padding: 20px; /* Inner spacing */
+}
+
+.project-content h3 {
+  font-size: 15px; /* Title size */
+  margin-bottom: 10px; /* Space below title */
+  color: #ffffff; /* White for project title */
+  letter-spacing: 0.5px; /* Letter spacing */
+  text-transform: uppercase; /* Uppercase title */
+  opacity: 0; /* Initially invisible */
+  animation: fadeInLeft 0.8s ease-in-out forwards; /* Fade in from left */
+}
+
+.project-content p {
+  font-size: 1rem; /* Description size */
+  margin-bottom: 15px; /* Space below description */
+  color: #bdc3c7; /* Light grey for project description */
+  opacity: 0; /* Initially invisible */
+  animation: fadeInRight 0.8s ease-in-out forwards 0.2s; /* Fade in from right */
+}
+
+.project-links {
+  display: flex; /* Flexbox for links */
+  justify-content: space-between; /* Space between links */
+  opacity: 0; /* Initially invisible */
+  animation: fadeIn 1s ease-in-out forwards 0.4s; /* Fade-in for links */
+}
+
+.btn, .btn-outline {
+  padding: 10px 20px; /* Button padding */
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+  position: relative; /* Ensure buttons are above hover effects */
+  z-index: 1; /* Above hover effects */
+}
+
+.btn {
+  background-color: #1ED760; /* White button */
+  color: #ffffff; /* Black text */
+}
+
+.btn:hover {
+  background-color: #e6e6e6; /* Light grey on hover */
+  transform: translateY(-5px); /* Subtle lift effect */
+}
+
+.btn-outline {
+  background-color: transparent; /* Transparent background */
+  border: 2px solid #1ED760; /* White border */
+  color: #1ED760; /* White text */
+}
+
+.btn-outline:hover {
+  background-color: #ffffff; /* White on hover */
+  color: #000000; /* Black text on hover */
+  transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    opacity: 1; /* Fade in */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Move down */
+  }
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Reset position */
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateX(-20px); /* Move left */
+  }
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Reset position */
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateX(20px); /* Move right */
+  }
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Reset position */
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0; /* Start invisible */
+    transform: translateY(-50px); /* Move up */
+  }
+  to {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Reset position */
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+}

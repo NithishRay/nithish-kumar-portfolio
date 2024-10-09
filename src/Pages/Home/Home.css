@@ -1,0 +1,30 @@
+/* Home.css */
+.home {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* General styles for sections */
+  section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .fade-in {
+    animation: fadeIn 1s ease-in; /* Fade-in animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
